@@ -10,9 +10,9 @@ function main(): void {
 	files.forEach(file => {
 		const fileOutput = processFile(file);
 
-		console.info(`Writing ${file}.d.ts`);
+		console.info(`Writing ${file}.ts`);
 
-		writeFileSync(`${file}.d.ts`, fileOutput);
+		writeFileSync(`${file}.ts`, fileOutput);
 	});
 }
 
