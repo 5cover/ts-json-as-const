@@ -1,27 +1,27 @@
 # ts-json-as-const
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/gabroberge/ts-json-as-const/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/5cover/ts-json-as-const/LICENSE)
 
-[![Server checks](https://github.com/gabroberge/ts-json-as-const/actions/workflows/ci.yaml/badge.svg)](https://github.com/gabroberge/ts-json-as-const/actions/workflows/ci.yaml)
+[![Server checks](https://github.com/5cover/ts-json-as-const/actions/workflows/ci.yaml/badge.svg)](https://github.com/5cover/ts-json-as-const/actions/workflows/ci.yaml)
 
 ## Installation
 
 Install with pnpm
 
 ```bash
-pnpm add @gabroberge/ts-json-as-const
+pnpm add @5cover/ts-json-as-const
 ```
 
 Install with yarn
 
 ```bash
-yarn add @gabroberge/ts-json-as-const
+yarn add @5cover/ts-json-as-const
 ```
 
 Install with npm
 
 ```bash
-npm install --save @gabroberge/ts-json-as-const
+npm install --save @5cover/ts-json-as-const
 ```
 
 ## Usage
@@ -115,8 +115,8 @@ export = Array;
 
 👤 **Gabriel Roberge**
 
--   Github: [@gabroberge](https://github.com/gabroberge)
+- Github: [@5cover](https://github.com/5cover)
 
 👤 **Bethany Hitch** (Original Author)
 
--   Github: [@dfoverdx](https://github.com/dfoverdx)
+- Github: [@dfoverdx](https://github.com/dfoverdx)
