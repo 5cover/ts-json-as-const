@@ -1,48 +1,10 @@
 {
-	"name": "@gabroberge/ts-json-as-const",
-	"version": "1.1.1",
-	"description": "A (very) simple CLI tool that reads JSON files and creates .d.ts files with their keys/values explicitly defined",
-	"private": false,
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
+	"author": "5cover",
 	"bin": {
 		"ts-json-as-const": "./dist/index.js"
 	},
-	"packageManager": "pnpm@9.1.4",
-	"type": "module",
-	"scripts": {
-		"build": "tsup src/index.ts --format cjs,esm --dts",
-		"dev": "node dist/index.mjs",
-		"format": "prettier --write \"**/*.{ts,json,md}\"",
-		"lint": "concurrently --raw \"pnpm run lint:eslint\" \"pnpm run lint:typescript\"",
-		"lint:eslint": "eslint \"**/*.{ts,json,md}\" --fix",
-		"lint:typescript": "tsc",
-		"test": "vitest run",
-		"prepare": "husky",
-		"release": "pnpm run build && changeset publish"
-	},
-	"keywords": [
-		"typescript",
-		"json",
-		"const",
-		"declaration",
-		"declaration files"
-	],
-	"author": "Gabriel Roberge",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/gabroberge/ts-json-as-const.git"
-	},
-	"homepage": "https://github.com/gabroberge/ts-json-as-const#readme",
-	"bugs": "https://github.com/gabroberge/ts-json-as-const/issues",
-	"peerDependencies": {
-		"inflection": "^3.0.0",
-		"isbinaryfile": "^5.0.2",
-		"json5": "^2.2.3",
-		"stringify-object": "^5.0.0"
-	},
+	"bugs": "https://github.com/5cover/ts-json-as-const/issues",
+	"description": "A (very) simple CLI tool that reads JSON files and creates .ts files with their keys/values explicitly defined",
 	"devDependencies": {
 		"@changesets/cli": "^2.27.5",
 		"@total-typescript/ts-reset": "^0.5.1",
@@ -68,5 +30,43 @@
 		"tsup": "^8.0.2",
 		"typescript": "^5.4.5",
 		"vitest": "^1.6.0"
-	}
+	},
+	"homepage": "https://github.com/5cover/ts-json-as-const#readme",
+	"keywords": [
+		"typescript",
+		"json",
+		"const",
+		"declaration",
+		"declaration files"
+	],
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"name": "@5cover/ts-json-as-const",
+	"packageManager": "pnpm@9.1.4",
+	"peerDependencies": {
+		"inflection": "^3.0.0",
+		"isbinaryfile": "^5.0.2",
+		"json5": "^2.2.3",
+		"stringify-object": "^5.0.0"
+	},
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/5cover/ts-json-as-const.git"
+	},
+	"scripts": {
+		"build": "tsup src/index.ts --format cjs,esm --dts",
+		"dev": "node dist/index.mjs",
+		"format": "prettier --write \"**/*.{ts,json,md}\"",
+		"lint": "concurrently --raw \"pnpm run lint:eslint\" \"pnpm run lint:typescript\"",
+		"lint:eslint": "eslint \"**/*.{ts,json,md}\" --fix",
+		"lint:typescript": "tsc",
+		"prepare": "husky",
+		"release": "pnpm run build && changeset publish",
+		"test": "vitest run"
+	},
+	"type": "module",
+	"types": "./dist/index.d.ts",
+	"version": "1.1.1"
 }
