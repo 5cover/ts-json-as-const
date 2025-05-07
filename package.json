@@ -1,72 +1,72 @@
 {
-	"author": "5cover",
-	"bin": {
-		"ts-json-as-const": "./dist/index.js"
-	},
-	"bugs": "https://github.com/5cover/ts-json-as-const/issues",
-	"description": "A (very) simple CLI tool that reads JSON files and creates .ts files with their keys/values explicitly defined",
-	"devDependencies": {
-		"@changesets/cli": "^2.27.5",
-		"@total-typescript/ts-reset": "^0.5.1",
-		"@types/node": "^20.13.0",
-		"@types/stringify-object": "^4.0.5",
-		"@typescript-eslint/eslint-plugin": "^7.9.0",
-		"@typescript-eslint/parser": "^7.9.0",
-		"concurrently": "^8.2.2",
-		"eslint": "^8.57.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-jest-formatting": "^3.1.0",
-		"eslint-plugin-jsonc": "^2.15.1",
-		"eslint-plugin-markdown": "^5.0.0",
-		"eslint-plugin-vitest": "^0.4.1",
-		"husky": "^9.0.11",
-		"inflection": "^3.0.0",
-		"isbinaryfile": "^5.0.2",
-		"json5": "^2.2.3",
-		"prettier": "^3.3.0",
-		"prettier-plugin-organize-imports": "^3.2.4",
-		"stringify-object": "^5.0.0",
-		"tsup": "^8.0.2",
-		"typescript": "^5.4.5",
-		"vitest": "^1.6.0"
-	},
-	"homepage": "https://github.com/5cover/ts-json-as-const#readme",
-	"keywords": [
-		"typescript",
-		"json",
-		"const",
-		"declaration",
-		"declaration files"
-	],
-	"license": "MIT",
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"name": "@5cover/ts-json-as-const",
-	"packageManager": "pnpm@9.1.4",
-	"peerDependencies": {
-		"inflection": "^3.0.0",
-		"isbinaryfile": "^5.0.2",
-		"json5": "^2.2.3",
-		"stringify-object": "^5.0.0"
-	},
-	"private": false,
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/5cover/ts-json-as-const.git"
-	},
-	"scripts": {
-		"build": "tsup src/index.ts --format cjs,esm --dts",
-		"dev": "node dist/index.mjs",
-		"format": "prettier --write \"**/*.{ts,json,md}\"",
-		"lint": "concurrently --raw \"pnpm run lint:eslint\" \"pnpm run lint:typescript\"",
-		"lint:eslint": "eslint \"**/*.{ts,json,md}\" --fix",
-		"lint:typescript": "tsc",
-		"prepare": "husky",
-		"release": "pnpm run build && changeset publish",
-		"test": "vitest run"
-	},
-	"type": "module",
-	"types": "./dist/index.d.ts",
-	"version": "1.2.0"
+  "author": "5cover",
+  "bin": {
+    "ts-json-as-const": "./dist/index.js"
+  },
+  "bugs": "https://github.com/5cover/ts-json-as-const/issues",
+  "description": "A (very) simple CLI tool that reads JSON files and creates .ts files with their keys/values explicitly defined",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.5",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@types/node": "^20.13.0",
+    "@types/stringify-object": "^4.0.5",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest-formatting": "^3.1.0",
+    "eslint-plugin-jsonc": "^2.15.1",
+    "eslint-plugin-markdown": "^5.0.0",
+    "eslint-plugin-vitest": "^0.4.1",
+    "husky": "^9.0.11",
+    "inflection": "^3.0.0",
+    "isbinaryfile": "^5.0.2",
+    "json5": "^2.2.3",
+    "prettier": "^3.3.0",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "stringify-object": "^5.0.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "homepage": "https://github.com/5cover/ts-json-as-const#readme",
+  "keywords": [
+    "const",
+    "declaration",
+    "declaration files",
+    "json",
+    "typescript"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "name": "@5cover/ts-json-as-const",
+  "packageManager": "pnpm@9.1.4",
+  "peerDependencies": {
+    "inflection": "^3.0.0",
+    "isbinaryfile": "^5.0.2",
+    "json5": "^2.2.3",
+    "stringify-object": "^5.0.0"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5cover/ts-json-as-const.git"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "node dist/index.mjs",
+    "format": "prettier --write \"**/*.{ts,json,md}\"",
+    "lint": "concurrently --raw \"pnpm run lint:eslint\" \"pnpm run lint:typescript\"",
+    "lint:eslint": "eslint \"**/*.{ts,json,md}\" --fix",
+    "lint:typescript": "tsc",
+    "prepare": "husky",
+    "release": "pnpm run build && changeset publish",
+    "test": "vitest run"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "version": "1.2.0"
 }
