@@ -9,7 +9,7 @@ function main(): void {
 	for (let i = 0; i < args.length; ++i) {
 		const file = args[i]!;
 		const outFile = args[i + 1];
-		if (outFile === undefined) i++;
+		if (outFile !== undefined) i++;
 		console.info('Writing', outFile);
 		writeFileSync(outFile ?? `${file}.generated.ts`, processFile(file));
 	}
