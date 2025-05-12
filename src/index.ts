@@ -5,10 +5,12 @@ import { writeFileSync } from 'fs';
 import { processFile } from './process-file';
 
 function main(): void {
-	for (const file of process.argv.slice(2)) {
-		const filename = `${file}.generated.ts`;
-		console.info('Writing', filename);
-		writeFileSync(filename, processFile(file));
+	const args = process.argv.slice(2);
+	for (let i = 0; i < args.length; ++i) {
+		const file = args[i]!;
+		const outFile = args[i + 1] ?? `${file}.generated.ts`;
+		console.info('Writing', outFile);
+		writeFileSync(outFile, processFile(file));
 	}
 }
 
