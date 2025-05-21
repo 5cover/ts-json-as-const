@@ -1,17 +1,20 @@
 #!/usr/bin/env node
 
-import { writeFileSync } from 'fs';
+import { ensureDirSync, writeFileSync } from 'fs-extra';
+import p from 'path';
 
 import { processFile } from './process-file';
 
 function main(): void {
 	const args = process.argv.slice(2);
 	for (let i = 0; i < args.length; ++i) {
-		const file = args[i]!;
-		const outFile = args[i + 1];
+		const infile = args[i]!;
+		let outFile = args[i + 1];
 		if (outFile !== undefined) i++;
+		outFile ??= `${infile}.generated.ts`;
 		console.info('Writing', outFile);
-		writeFileSync(outFile ?? `${file}.generated.ts`, processFile(file));
+		ensureDirSync(p.dirname(outFile));
+		writeFileSync(outFile, processFile(infile));
 	}
 }
 
