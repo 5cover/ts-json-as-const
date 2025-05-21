@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { ensureDirSync, writeFileSync } from 'fs-extra';
+import fs from 'fs-extra';
 import p from 'path';
 
 import { processFile } from './process-file';
@@ -13,8 +13,8 @@ function main(): void {
 		if (outFile !== undefined) i++;
 		outFile ??= `${infile}.generated.ts`;
 		console.info('Writing', outFile);
-		ensureDirSync(p.dirname(outFile));
-		writeFileSync(outFile, processFile(infile));
+		fs.ensureDirSync(p.dirname(outFile));
+		fs.writeFileSync(outFile, processFile(infile));
 	}
 }
 
